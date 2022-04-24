@@ -1,0 +1,6 @@
+use_frameworks!
+target 'IflyMSC_Tests' do
+  pod 'IflyMSC', :path => '../'
+  
+  
+end
