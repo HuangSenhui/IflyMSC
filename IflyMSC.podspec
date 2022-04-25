@@ -1,42 +1,19 @@
-#
-# Be sure to run `pod lib lint IflyMSC.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'IflyMSC'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of IflyMSC.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.summary          = '科大讯飞语音识别SDK'
 
   s.homepage         = 'https://github.com/huangsenhui@live.com/IflyMSC'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'huangsenhui@live.com' => 'huangsenhui@live.com' }
-  s.source           = { :git => 'https://github.com/huangsenhui@live.com/IflyMSC.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Senhui' => 'huangsenhui@live.com' }
+  s.source           = { :git => 'https://github.com/huangsenhui@live.com/IflyMSC.git', :tag => s.version }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
 
-  s.source_files = 'IflyMSC/Classes/**/*'
+  s.source_files = 'iflyMSC.framework/Headers/*.h'
+  s.vendored_frameworks = 'iflyMSC.framework'
   
-  # s.resource_bundles = {
-  #   'IflyMSC' => ['IflyMSC/Assets/*.png']
-  # }
+  s.frameworks = 'CoreLocation','CoreTelephony','AVFoundation','AddressBook','AudioToolbox','SystemConfiguration','QuartzCore','CoreGraphics'
+  s.libraries = 'z','c++'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
